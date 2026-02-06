@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+  --color-primary: #1d3557; /* dark blue */
+  --color-secondary: #f1faee; /* off-white */
+  --color-accent: #e63946; /* red accent */
+  --color-dark: #090e0d;
+  --color-white: #f1f1f1;
+  --color-gray: #bababa;
+  --color-darkgray: #2c2b2bff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+}

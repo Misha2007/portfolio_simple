@@ -117,7 +117,7 @@ export default function Projects() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="px-6 py-3 rounded-full text-sm w-full
-           bg-white text-dark border border-gray/40
+           bg-white text-dark border border-gray dark:border-gray/40
            placeholder:text-darkgray-500
            dark:bg-dark dark:text-white
            dark:border-gray/30 dark:placeholder:text-darkgray
@@ -127,7 +127,7 @@ export default function Projects() {
           <button
             onClick={() => setShowFilters(true)}
             className="px-6 py-3 text-sm rounded-full border
-           border-gray/40
+           border-gray dark:border-gray/40
            hover:bg-dark hover:text-white
            dark:hover:bg-white dark:hover:text-dark
            transition-colors"
@@ -138,15 +138,22 @@ export default function Projects() {
 
         {/* Filter Modal */}
         {showFilters && (
-          <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-20">
+          <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-20 ">
             <div
-              className="bg-white text-dark p-8 rounded-2xl
-           w-full max-w-lg
-           dark:bg-dark dark:text-white
-           border border-gray/30
-           shadow-2xl"
+              className="
+        h-full w-full
+        md:h-auto md:max-w-lg md:mx-auto 
+        bg-white dark:bg-dark
+        text-dark dark:text-white
+        p-6 md:p-8
+        border-t md:border
+        border-gray-300 dark:border-gray-700
+        md:rounded-2xl
+      "
             >
-              <h3 className="text-xl font-semibold mb-6">Filters</h3>
+              <h3 className="text-xl font-semibold mb-6 mt-20 md:mt-0">
+                Filters
+              </h3>
 
               {/* Categories */}
               <div className="mb-6">
@@ -160,7 +167,7 @@ export default function Projects() {
     ${
       selectedCategories.includes(cat)
         ? "bg-dark text-white border-dark dark:bg-white dark:text-dark dark:border-white"
-        : "bg-white text-dark border-gray/40 dark:bg-dark dark:text-white dark:border-gray/30"
+        : "bg-white text-dark border-gray dark:border-gray/40 dark:bg-dark dark:text-white dark:border-gray/30"
     }
   `}
                     >
@@ -181,7 +188,7 @@ export default function Projects() {
                       className={`px-4 py-1 border rounded-full text-sm ${
                         linkFilter === type
                           ? "bg-dark text-white border-dark dark:bg-white dark:text-dark dark:border-white"
-                          : "bg-white text-dark border-gray/40 dark:bg-dark dark:text-white dark:border-gray/30"
+                          : "bg-white text-dark border-gray dark:border-gray/40 dark:bg-dark dark:text-white dark:border-gray/30"
                       }`}
                     >
                       {type === "all"
@@ -210,7 +217,7 @@ export default function Projects() {
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-30">
             <div
               className="bg-white text-dark p-8 rounded-2xl
-           w-full max-w-lg
+           w-90 md:w-full max-w-lg
            dark:bg-dark dark:text-white
            border border-gray/30
            shadow-2xl
@@ -272,7 +279,7 @@ export default function Projects() {
                   <span
                     key={cat}
                     className="px-3 py-1 text-xs rounded-full border
-           border-gray/40 text-darkgray-600
+           border-gray dark:border-gray/40 text-darkgray-600
            dark:border-gray/30 dark:text-gray"
                   >
                     {cat}
@@ -290,7 +297,7 @@ export default function Projects() {
               key={project.id}
               onClick={() => setActiveProject(project)}
               className="p-6 rounded-xl border cursor-pointer
-           bg-white text-dark border-gray/40
+           bg-white text-dark border-gray dark:border-gray/40
            dark:bg-dark dark:text-white dark:border-gray/20
            transition-all duration-300 hover:opacity-80"
             >
@@ -306,7 +313,7 @@ export default function Projects() {
                   <span
                     key={cat}
                     className="px-3 py-1 text-xs rounded-full border
-           border-gray/40 text-darkgray-600
+           border-gray dark:border-gray/40 text-darkgray-600
            dark:border-gray/30 dark:text-gray"
                   >
                     {cat}

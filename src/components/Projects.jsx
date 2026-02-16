@@ -234,7 +234,7 @@ export default function Projects() {
                 {activeProject.title}
               </h3>
 
-              <div className="mt-4 flex flex-wrap gap-4 text-sm text-darkgray">
+              <div className="mt-4 flex flex-wrap gap-4 text-sm text-darkgray dark:text-gray">
                 <p>
                   <strong>Type:</strong>{" "}
                   {activeProject.type === "solo"
@@ -270,7 +270,7 @@ export default function Projects() {
                   </p>
                 )}
               </div>
-              <p className="mt-3 text-sm text-darkgray">
+              <p className="mt-3 text-sm text-darkgray dark:text-gray">
                 {activeProject.description}
               </p>
 

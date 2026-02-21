@@ -84,6 +84,7 @@ export default function Projects() {
   };
 
   const filteredProjects = projects.filter((project) => {
+    const normalizedSearch = search.trim().toLowerCase();
     const matchesSearch =
       (project.title || "")
         .toLowerCase()

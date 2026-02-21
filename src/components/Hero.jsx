@@ -78,7 +78,7 @@ export default function Hero() {
             className="
             mt-4 text-base sm:text-lg
             max-w-xl mx-auto md:mx-0
-            text-darkgray dark:text-white
+            text-darkgray dark:text-gray
           "
           >
             I build clean, accessible, and performant web applications using
@@ -112,6 +112,7 @@ export default function Hero() {
               rounded-3xl shadow-xl
               border-2 border-dark dark:border-white
               transition-colors
+              bg-white
             "
           />
         </div>

@@ -17,7 +17,7 @@ export default function About() {
           in the vocational school. Before moving abroad, I attended gymnasium
           Kyiv-Mohyla Collegium in <strong>Ukraine</strong>. 
         </p>
-        <br>
+        <br />
         <p className="text-darkgray dark:text-gray text-lg leading-relaxed">
           I decided to become a
           software developer because this speciality opens a lot of
@@ -27,7 +27,7 @@ export default function About() {
           was the <strong>perfect field</strong> for me. The more I learned, the more I felt
           motivated to continue pursuing this path. 
         </p>
-        <br>
+        <br />
         <p className="text-darkgray dark:text-gray text-lg leading-relaxed">
           Even though I haven't
           participated in any official competitions yet, I took part in the <strong>Hack Club's
@@ -36,14 +36,14 @@ export default function About() {
           the project was closed before I could complete it, I received valuable
           feedback from testers and learned a lot through the process. 
         </p>
-        <br>
+        <br />
         <p className="text-darkgray dark:text-gray text-lg leading-relaxed">
           Outside
           of programming, I enjoy playing <strong>volleyball</strong> and <strong>ping pong</strong>. I also like
           to play the <strong>guitar</strong> in my free time; it's a great way to relax and
           express creativity in a different way. 
         </p>
-        <br>
+        <br />
         <p className="text-darkgray dark:text-gray text-lg leading-relaxed">
           Thank you for visiting my
           portfolio, and feel free to explore my work!

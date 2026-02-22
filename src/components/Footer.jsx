@@ -28,7 +28,7 @@ export default function Footer() {
             className="flex items-center gap-3 hover:text-dark/70 dark:hover:text-white/70 transition-colors"
           >
             <FiPhone className="text-xl" />
-            <span>+372 53725074</span>
+            <span>+372 5372 5074</span>
           </a>
 
           <a

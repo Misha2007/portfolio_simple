@@ -14,7 +14,8 @@ const projects = [
     id: 2,
     title: "Flash Mind",
     categories: ["React", "JavaScript", "Frontend"],
-    description: "Flash Mind is a fast-paced memory game where players must memorize and click on flashing squares in the correct order. Built with React, it features progressive difficulty and a responsive UI for an engaging and challenging experience.",
+    description:
+      "Flash Mind is a fast-paced memory game where players must memorize and click on flashing squares in the correct order. Built with React, it features progressive difficulty and a responsive UI for an engaging and challenging experience.",
     github: "https://github.com/Misha2007/Visual-Memory-game",
     type: "group",
   },
@@ -29,7 +30,8 @@ const projects = [
     id: 4,
     title: "Anime Website",
     categories: ["HTML", "JavaScript", "Frontend"],
-    description: "This was the final project for my HTML/CSS course, and it provides curated lists, a merchandise store, and an about section.",
+    description:
+      "This was the final project for my HTML/CSS course, and it provides curated lists, a merchandise store, and an about section.",
     github: "https://github.com/Misha2007/anime-site",
     type: "solo",
     link: "https://ita23drogovoz.ita.voco.ee/Veebiarendus/animesite/",
@@ -38,28 +40,34 @@ const projects = [
     id: 5,
     title: "Sportvana",
     categories: ["React", "Node.js", "JavaScript", "Fullstack"],
-    description: "This is a fitness gamification app that was developed with React, Express, MySQL, featuring JWT authentication, email verification, 3D animations (Three.js), onboarding tour (React Joyride), and user data management.",
+    description:
+      "This is a fitness gamification app that was developed with React, Express, MySQL, featuring JWT authentication, email verification, 3D animations (Three.js), onboarding tour (React Joyride), and user data management.",
     github: "https://github.com/MykhailoDrogovoz/hackatime",
     type: "solo",
     link: "https://sportvana.netlify.app",
+    userToUse: { email: "john@gmail.com", password: "qwerty" },
   },
   {
     id: 6,
     title: "Booking system",
     categories: ["React", "Node.js", "JavaScript", "Fullstack"],
-    description: "This is full-stack hotel booking platform. There was implemented JWT authentication, integrated MySQL with Sequelize for trip listings, user profiles, and bookings, and customized Stripe payments. In addition, there is built an admin dashboard with Recharts for enhanced data visualization.",
+    description:
+      "This is full-stack hotel booking platform. There was implemented JWT authentication, integrated MySQL with Sequelize for trip listings, user profiles, and bookings, and customized Stripe payments. In addition, there is built an admin dashboard with Recharts for enhanced data visualization.",
     github: "https://github.com/Misha2007/booking_system",
     type: "group",
     link: "https://bosystem.netlify.app/",
+    userToUse: { email: "john@gmail.com", password: "qwerty" },
   },
   {
     id: 7,
     title: "Smart City Event Map",
     categories: ["Next.js", "JavaScript", "Frontend"],
-    description: "This is a city-wide interactive map with Next.js, displaying events and stored in Supabase, using Leaflet for a dynamic user experience. The data was fetched using a Python scraper from https://kultuuriaken.tartu.ee/",
+    description:
+      "This is a city-wide interactive map with Next.js, displaying events and stored in Supabase, using Leaflet for a dynamic user experience. The data was fetched using a Python scraper from https://kultuuriaken.tartu.ee/",
     github: "https://github.com/Misha2007/smart-city-event-map",
     type: "solo",
     link: "https://smart-city-events-map.vercel.app/",
+    userToUse: { email: "john@gmail.com", password: "qwerty" },
   },
 ];
 
@@ -86,14 +94,10 @@ export default function Projects() {
   const filteredProjects = projects.filter((project) => {
     const normalizedSearch = search.trim().toLowerCase();
     const matchesSearch =
-      (project.title || "")
-        .toLowerCase()
-        .includes(normalizedSearch) ||
-      (project.description || "")
-        .toLowerCase()
-        .includes(normalizedSearch) ||
+      (project.title || "").toLowerCase().includes(normalizedSearch) ||
+      (project.description || "").toLowerCase().includes(normalizedSearch) ||
       (project.categories || []).some((cat) =>
-        cat.toLowerCase().includes(normalizedSearch)
+        cat.toLowerCase().includes(normalizedSearch),
       );
 
     const matchesCategory =
@@ -225,7 +229,7 @@ export default function Projects() {
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-30">
             <div
               className="bg-white text-dark p-8 rounded-2xl
-           w-90 md:w-full max-w-lg
+           w-90 md:w-full max-w-xl
            dark:bg-dark dark:text-white
            border border-gray/30
            shadow-2xl
@@ -275,6 +279,16 @@ export default function Projects() {
                     >
                       Visit website
                     </a>
+                  </p>
+                )}
+                {activeProject.link && (
+                  <p>
+                    <strong>Demo User Credentials:</strong>
+                    <p>
+                      <strong>Email:</strong> {activeProject.userToUse.email}
+                    </p>
+                    <strong>Password:</strong>{" "}
+                    {activeProject.userToUse.password}
                   </p>
                 )}
               </div>

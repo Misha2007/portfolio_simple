@@ -25,6 +25,8 @@ const projects = [
     categories: ["Pygame", "Python", "Game Development"],
     description:
       "Chess implementation in Python with AI using minimax and alpha-beta pruning.",
+    github: "https://github.com/Misha2007/chess-project",
+    type: "solo",
   },
   {
     id: 4,
@@ -281,7 +283,7 @@ export default function Projects() {
                     </a>
                   </p>
                 )}
-                {activeProject.link && (
+                {activeProject.link && activeProject.userToUse && (
                   <p>
                     <strong>Demo User Credentials:</strong>
                     <p>

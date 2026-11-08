@@ -71,6 +71,15 @@ const projects = [
     link: "https://smart-city-events-map.vercel.app/",
     userToUse: { email: "john@gmail.com", password: "qwerty" },
   },
+  {
+    id: 8,
+    title: "Killud",
+    categories: ["Godot", "Game Development"],
+    description:
+      "Killud is a narrative 2D game about memory, loneliness, and subjective perception. You play as a little girl who arrives at an old house with her mother. She explores the house and discovers old photographs. Looking at these photographs, the girl begins to imagine the lives of the people in them. But her interpretations are influenced not by what actually happened, but by her own experiences, fears, and desires.",
+    type: "group",
+    link: "https://sibaraku.itch.io/killud",
+  },
 ];
 
 export default function Projects() {
